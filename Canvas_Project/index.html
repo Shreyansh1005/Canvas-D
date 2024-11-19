@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Text Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Canvas Text Project</h1>
+  
+  <!-- Undo and Redo buttons with icons -->
+  <div class="icon-buttons">
+    <button class="icon-button" onclick="undo()">
+      <span class="icon">⤺</span>
+      <span>Undo</span>
+    </button>
+    <button class="icon-button" onclick="redo()">
+      <span class="icon">⤻</span>
+      <span>Redo</span>
+    </button>
+  </div>
+
+  <canvas id="canvas" width="800" height="400"></canvas>
+
+  <div class="controls">
+    <input type="text" id="textInput" placeholder="Enter text here">
+    
+    <select id="fontSelect">
+        <option value="Arial">Arial</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Comic Sans MS">Comic Sans MS</option>
+        <option value="Trebuchet MS">Trebuchet MS</option>
+        <option value="Impact">Impact</option>
+        <option value="Lucida Console">Lucida Console</option>
+    </select>
+
+    <input type="number" id="fontSize" placeholder="Font size" min="10" value="20">
+
+    <div class="text-style-options">
+        <label>
+          <input type="checkbox" id="boldCheckbox"> Bold
+        </label>
+        <label>
+          <input type="checkbox" id="italicCheckbox"> Italic
+        </label>
+        <label>
+          <input type="checkbox" id="underlineCheckbox"> Underline
+        </label>
+    </div>
+
+    <button onclick="addText()">Add Text</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
